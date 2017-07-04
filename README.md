@@ -1,6 +1,8 @@
 # YOG2-SAN-TODO-MVC
 =========================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hefangshi/yog2-san-todo-mvc.svg)](https://greenkeeper.io/)
+
 ## 安装依赖
 
 ```javascript
