@@ -1,0 +1,16 @@
+{
+  "name": "yog2-san-todo-mvc",
+  "version": "1.0.0",
+  "description": "san todo mvc demo",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "yog2 release debug -cw",
+    "debug-prod": "yog2 release debug-prod -cw"
+  },
+  "author": "hefangshi@baidu.com",
+  "license": "MIT",
+  "devDependencies": {
+    "fis-parser-babel-6.x": "^6.24.1",
+    "fis3-parser-san-component": "^1.0.0"
+  }
+}

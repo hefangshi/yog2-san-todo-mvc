@@ -1,0 +1,21 @@
+{
+  "name": "todos-store-example",
+  "version": "0.0.1",
+  "description": "san components todos",
+  "author": "ecomfe",
+  "private": true,
+  "scripts": {
+    "test": ""
+  },
+  "dependencies": {
+    "babel-runtime": "^6.0.0",
+    "font-awesome": "^4.6.3",
+    "jquery": "^3.1.1",
+    "moment": "^2.15.1",
+    "san": "^3.1.2",
+    "san-router": "^1.0.3",
+    "san-store": "^1.0.1",
+    "san-update": "2.0.0",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
