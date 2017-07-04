@@ -45,17 +45,25 @@ fis.media('debug').match('*', {
     })
 });
 
-fis.media('debug-prod').hook('commonjs' , {
+const uglifyOpt = {
+    output: {
+        comments: function (that, comment) {
+            return comment.type == "comment2" && /@preserve|@license|@cc_on|Copyright/i.test(comment.value);
+        }
+    }
+}
+
+fis.media('debug-prod').hook('commonjs', {
     paths: {
         san: '/client/node_modules/san/dist/san.js'
     },
     extList: ['.js', '.san']
-}).match('/client/src/{**.js,**.san}',{
-    optimizer: fis.plugin('uglify-js', {
-        comments: 'some'
-    }),
+}).match('/client/node_modules/**.js', {
+    optimizer: fis.plugin('uglify-js', uglifyOpt)
+}).match('/client/src/{**.js,**.san}', {
+    optimizer: fis.plugin('uglify-js', uglifyOpt),
     packTo: '/client/pkg/app.js'
-}).match('/client/src/**.css',{
+}).match('/client/src/**.css', {
     packTo: '/client/pkg/app.css'
 }).match('*', {
     deploy: fis.plugin('http-push', {
