@@ -131,8 +131,6 @@ export default {
         todo.id = id;
         data.list.unshift(todo);
 
-        console.log(data.list[0]);
-
         return new Promise(function (resolve) {
             resolve(todo);
         });
